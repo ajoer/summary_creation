@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1671.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Helvetica; color: #000000; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Helvetica; color: #000000; -webkit-text-stroke: #000000; min-height: 12.0px}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!-- You must include this JavaScript file --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;script src="https://assets.crowd.aws/crowd-html-elements.js"&gt;&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1">&lt;!-- For the full list of available Crowd HTML Elements and their input/output documentation,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>please refer to https://docs.aws.amazon.com/sagemaker/latest/dg/sms-ui-template-reference.html --&gt;</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1">&lt;!-- You must include crowd-form so that your task submits answers to MTurk --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;crowd-form answer-format="flatten-objects"&gt;</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;header&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h1&gt;Summary creation&lt;/h1&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Instructions&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;In this task, we will ask you to read a biography and provide a summary of that biography.<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>Your summary should be shorter than the biography, &lt;strong&gt;2-5 sentences long&lt;/strong&gt;, and it should contain &lt;strong&gt;the most important information&lt;/strong&gt; from the biography.<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>It should be fluent, informative, and useful.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;strong&gt;Please read the entire biography&lt;/strong&gt;,<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>even if you are already familiar with the person about whom the biography is written.<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>We are interested in your summary of the biography, not what you may already know about the person.&lt;/p&gt;<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;We assign 10 minutes to complete the assignment.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>The time allocation is based on average reading speeds and the cognitive load of the task.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;strong&gt;We will regard your answer as invalid if you complete the assignment in an<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>unreasonably short amount of time&lt;/strong&gt;. The cut-off will be dependent on the length of the texts.&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;We will also regard the task as incomplete if the summary is a replication of the biography<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>or if the summary is too long or too short. In these cases, you will not be paid.&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;Afterwards, we will ask you four questions about who you are.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>If there are &lt;strong&gt;discrepancies&lt;/strong&gt; in your answers to these demographic questions,<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>we will exclude you from the experiment, and you will not be paid.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>Likewise, if you leave a question unanswered, we consider the task incomplete, and you will not be paid for that task.&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;You can complete as many summary creation tasks as you want.<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>You will be paid for the number of tasks you &lt;strong&gt;complete&lt;/strong&gt;.<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;&lt;strong&gt;Please note that:&lt;/strong&gt;&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;li&gt;There is no advantage in answering the demographic questions in a certain way.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;li&gt;We do not exclude people from completing the tasks based on their demographic information.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;li&gt;We pay everyone equally independent of their demographic information.&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;header&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Summary ratings&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;Please read the biography carefully before writing your summary.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;header&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h3&gt;Biography of ${person}:&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;${biography}&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;&lt;strong&gt;Please write your summary here. It should be 2-5 sentences long, shorter than the biography, and be fluent, informative and useful.&lt;/strong&gt;&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label for="sentence_1"&gt;Sentence 1:&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;input type="text" id="sentence_1" maxlength=500 size=100 name="sentence_1"&gt;&lt;br&gt;&lt;br&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label for="sentence_2"&gt;Sentence 2:&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;input type="text" id="sentence_2" maxlength=500 size=100 name="sentence_2"&gt;&lt;br&gt;&lt;br&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label for="sentence_3"&gt;Sentence 3:&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;input type="text" id="sentence_3" maxlength=500 size=100 name="sentence_3"&gt;&lt;br&gt;&lt;br&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label for="sentence_4"&gt;Sentence 4:&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;input type="text" id="sentence_4" maxlength=500 size=100 name="sentence_4"&gt;&lt;br&gt;&lt;br&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label for="sentence_5"&gt;Sentence 5:&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;input type="text" id="sentence_5" maxlength=500 size=100 name="sentence_5"&gt;&lt;br&gt;&lt;br&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;header&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Demographic Information&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;&lt;strong&gt;1) What gender do you identify as?&lt;/strong&gt;&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label for="male"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;input type="radio" id="male" name="gender" value="male" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>Male</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label for="female"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;input type="radio" id="female" name="gender" value="female" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>Female</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label for="other"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;input type="radio" id="other" name="gender" value="other" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>Non-binary</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;&lt;strong&gt;2) Are you older than 30 years old?&lt;/strong&gt;&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;label for="younger"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;input type="radio" id="younger" name="age" value="younger" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>No, I am younger than 30</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;label for="30"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;input type="radio" id="30" name="age" value="30" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>I am &lt;strong&gt;exactly&lt;/strong&gt; 30 years old</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;label for="older"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;input type="radio" id="older" name="age" value="older" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>Yes, I am older than 30</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;&lt;strong&gt;3) What is your age?&lt;/strong&gt;&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;label for="typed_age"&gt;Age:&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;input type="text" id="typed_age" name="typed_age" value=""&gt;&lt;br&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;&lt;strong&gt;4) What race do you identify as?&lt;/strong&gt;&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;label for="hispanic"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;input type="radio" id="hispanic" name="race" value="hispanic" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>Hispanic&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;label for="black"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;input type="radio" id="black" name="race" value="black" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>Black&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;label for="asian"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;input type="radio" id="asian" name="race" value="asian" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>Asian&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;label for="american_indian"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;input type="radio" id="american_indian" name="race" value="american_indian" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>American Indian&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;label for="white"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;input type="radio" id="white" name="race" value="white" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>White&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;label for="other"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;input type="radio" id="other" name="race" value="other" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>Other&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1">&lt;/crowd-form&gt;</span></p>
+</body>
+</html>

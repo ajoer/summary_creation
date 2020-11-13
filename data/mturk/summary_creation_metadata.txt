@@ -1,0 +1,16 @@
+Project Name:	Summary Creation
+Title:	Write a summary 
+Description:	Write a summary of a biography of a famous person. 
+Keywords:	summary, creation, biographies, writing
+
+Reward per assignment:	0,5
+Number of assignments per task:	1
+Time allotted per assignment:	10	Minutes
+Task expires in:	7	Days
+Auto-approve and pay Workers in:	7	Days
+Require that Workers be Masters to do your tasks (Who are Mechanical Turk Masters?):	No
+Specify any additional qualifications Workers must meet to work on your tasks:	Location	is	UNITED STATES (US)
+Public - All Workers can see and preview my tasks
+
+
+Input: ../summary_preferences/data/MTurk/input/MTurk_input.csv
