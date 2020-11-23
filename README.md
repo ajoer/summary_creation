@@ -22,6 +22,7 @@ NB: The input for the MTurk template is located in the [Summary Preferences repo
 */mturk* contains one directory, */output*, as well as two files containing the setup for the MTurk experiments, the summary_quality_metadata and summary_quality_template.
 
 * The output subdirectory contains the raw data files from the Mechanical Turk experiments as well as the reviewed data file. This latter is used for analyses and is also uploaded to MTurk to approve and reject assignments. The raw output data from Mechanical Turk is only used to approve and reject assignments. 
+The reviewed data contains approvals and rejections based on the requirements in code/mturk_results_approve.py as well as manual rejections based on poor data quality, for instance if the Turker has written nonsense.
 
 ### **Code**
 
