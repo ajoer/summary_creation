@@ -157,7 +157,7 @@ class ReviewAssignments():
 		# 	reason = f"Your summary is too long ({number_of_sentences} sentences). The maximum requirement is 5 sentences."
 		# 	return False, reason
 
-		return True, ""
+		return True, "", summary
 
 	def _get_minimum_worktime(self):
 		# Get average normalized worktime, and standard deviation. 
@@ -191,6 +191,9 @@ class ReviewAssignments():
 
 		for index, worker_data in self.data.iterrows():
 
+			# already rejected manually due to nonsense.
+			if worker_data["Reject"] != worker_data["Reject"]: continue
+
 			worker_id = worker_data["WorkerId"]
 			person = worker_data["Input.person"]
 			worktime = worker_data["WorkTimeInSeconds"]
@@ -208,7 +211,7 @@ class ReviewAssignments():
 					
 				# Reject based on task incompletion
 				else:
-					verification, reason = self._verify_task_completion(worker_data)
+					verification, reason, summary = self._verify_task_completion(worker_data)
 					if not verification:
 						self._do_rejection(reason, worker_id, person, worktime, worker_data["AssignmentStatus"])
 					else:
@@ -216,8 +219,6 @@ class ReviewAssignments():
 						reason = ""
 						self.rejected_column.append("")
 						self.approved_column.append("x")
-
-			print()
 		self.data["Approve"] = self.approved_column
 		self.data["Reject"] = self.rejected_column
 		self.data.to_csv(f"data/mturk/output/reviewed/{sys.argv[1]}.csv", index=False)
