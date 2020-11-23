@@ -188,11 +188,12 @@ class ReviewAssignments():
 
 	def main(self):
 		# Review and approve/reject assignments based on time spent on assignment and complete demographics.
-
 		for index, worker_data in self.data.iterrows():
 
-			# already rejected manually due to nonsense.
-			if worker_data["Reject"] != worker_data["Reject"]: continue
+			if worker_data["AssignmentStatus"] != "Submitted":
+				self.rejected_column.append(worker_data["Reject"])
+				self.approved_column.append(worker_data["Approve"])
+				continue
 
 			worker_id = worker_data["WorkerId"]
 			person = worker_data["Input.person"]
@@ -219,6 +220,13 @@ class ReviewAssignments():
 						reason = ""
 						self.rejected_column.append("")
 						self.approved_column.append("x")
+
+						# Manually check the texts of these:
+						print(worker_data["HITId"])
+						print(summary)
+						print()
+
+
 		self.data["Approve"] = self.approved_column
 		self.data["Reject"] = self.rejected_column
 		self.data.to_csv(f"data/mturk/output/reviewed/{sys.argv[1]}.csv", index=False)
